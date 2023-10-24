@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="695.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GestionMateriel.gui.Maintenance2Controller">
+   <top>
+      <AnchorPane prefHeight="59.0" prefWidth="1369.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="60.0" prefWidth="200.0" styleClass="SIDEBAR" stylesheets="@materielajout.css">
+               <children>
+                  <Label contentDisplay="CENTER" styleClass="title-text" stylesheets="@materielajout.css" text="Gestion de Materiel" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="12.0" top="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <Button layoutX="1286.0" layoutY="12.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="66.0" text="Retour" />
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="SIDEBAR" stylesheets="@materielajout.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="90.0" fitWidth="80.0" layoutX="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Image/logo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btgestmatmaint" layoutX="10.0" layoutY="254.0" mnemonicParsing="false" onAction="#BoutonGestionMaterielMaint" prefHeight="40.0" prefWidth="180.0" styleClass="Sidebar-button" stylesheets="@materielajout.css" text="Gestion Matériel" />
+            <Button fx:id="btgestmaintmaint" layoutX="10.0" layoutY="193.0" mnemonicParsing="false" onAction="#BoutonGestionMaintenanceMaint" prefHeight="40.0" prefWidth="180.0" styleClass="Sidebar-button" stylesheets="@materielajout.css" text="Gestion Maintenance" />
+            <Button layoutX="10.0" layoutY="532.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" styleClass="Sidebar-button" stylesheets="@materielajout.css" text="Réclamation" />
+            <Button layoutX="10.0" layoutY="482.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" styleClass="Sidebar-button" stylesheets="@materielajout.css" text="Tâches" />
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="anchor-div" stylesheets="@materielajout.css" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutX="27.0" layoutY="14.0" prefHeight="193.0" prefWidth="1147.0" styleClass="anchor-div" stylesheets="@materielajout.css" AnchorPane.topAnchor="14.0">
+               <children>
+                  <AnchorPane layoutX="41.0" layoutY="39.0" prefHeight="103.0" prefWidth="200.0" styleClass="menu-card" stylesheets="@materielajout.css">
+                     <children>
+                        <ImageView fitHeight="78.0" fitWidth="89.0" layoutX="22.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Image/truck.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="116.0" layoutY="32.0" prefHeight="39.0" prefWidth="70.0" styleClass="card-text" stylesheets="@materielajout.css" text="Vehicules" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="474.0" layoutY="39.0" prefHeight="103.0" prefWidth="200.0" styleClass="menu-card" stylesheets="@materielajout.css">
+                     <children>
+                        <ImageView fitHeight="78.0" fitWidth="89.0" layoutX="14.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Image/tool.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="106.0" layoutY="32.0" prefHeight="39.0" prefWidth="70.0" styleClass="card-text" stylesheets="@materielajout.css" text="Outils" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="257.0" layoutY="39.0" prefHeight="103.0" prefWidth="200.0" styleClass="menu-card" stylesheets="@materielajout.css">
+                     <children>
+                        <ImageView fitHeight="78.0" fitWidth="89.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Image/storage.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="110.0" layoutY="32.0" prefHeight="39.0" prefWidth="70.0" styleClass="card-text" stylesheets="@materielajout.css" text="Silos" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="29.0" layoutY="232.0" prefHeight="378.0" prefWidth="579.0" styleClass="anchor-div" stylesheets="@materielajout.css">
+               <children>
+                  <VBox layoutX="20.0" layoutY="72.0" prefHeight="224.0" prefWidth="162.0" spacing="30.0">
+                     <children>
+                        <Label styleClass="card-text" stylesheets="@materielajout.css" text="Identifiant:" />
+                        <Label layoutX="10.0" layoutY="10.0" styleClass="card-text" stylesheets="@materielajout.css" text="Materiel" />
+                        <Label layoutX="10.0" layoutY="31.0" styleClass="card-text" stylesheets="@materielajout.css" text="Date Début:" />
+                        <Label layoutX="10.0" layoutY="52.0" styleClass="card-text" stylesheets="@materielajout.css" text="Date Fin:" />
+                        <Label layoutX="10.0" layoutY="73.0" styleClass="card-text" stylesheets="@materielajout.css" text="Description:" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="182.0" layoutY="72.0" prefHeight="265.0" prefWidth="162.0" spacing="25.0">
+                     <children>
+                        <TextField fx:id="tfidmaint" prefHeight="25.0" prefWidth="161.0" />
+                        <ComboBox fx:id="combotypemaint" prefHeight="25.0" prefWidth="162.0" />
+                        <TextField fx:id="tfdatedmaint" layoutX="10.0" layoutY="60.0" promptText=".. / .. / .." />
+                        <TextField fx:id="tfdatefmaint" layoutX="10.0" layoutY="110.0" promptText=".. / .. / .." />
+                        <TextArea fx:id="tadescmaint" prefHeight="73.0" prefWidth="162.0" />
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="39.0" prefWidth="70.0" styleClass="card-text" stylesheets="@materielajout.css" text="Outils" textFill="WHITE" />
+                              <Label fx:id="lbconfmaint" layoutX="-21.0" layoutY="11.0" prefHeight="21.0" prefWidth="156.0" styleClass="confirmation-message" stylesheets="@materielajout.css" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+                  <Button fx:id="btajoutermaint" layoutX="424.0" layoutY="201.0" mnemonicParsing="false" onAction="#BoutonAjouterMaintenance" prefHeight="43.0" prefWidth="96.0" styleClass="form-button" stylesheets="@materielajout.css" text="Ajouter" />
+                  <Label layoutX="20.0" layoutY="14.0" styleClass="form-title" stylesheets="@materielajout.css" text="Espace Gestion Maintenance:" />
+                  <Button fx:id="btmodifiermaint" layoutX="424.0" layoutY="262.0" mnemonicParsing="false" onAction="#BoutonModifierMaintenance" prefHeight="43.0" prefWidth="96.0" styleClass="form-button" stylesheets="@materielajout.css" text="Modifier" />
+                  <Label fx:id="lberrmaint" layoutX="375.0" layoutY="79.0" prefHeight="21.0" prefWidth="169.0" styleClass="error-message" stylesheets="@materielajout.css" />
+                  <Label layoutX="373.0" layoutY="126.0" prefHeight="21.0" prefWidth="175.0" styleClass="card-text" stylesheets="@materielajout.css" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="622.0" layoutY="232.0" prefHeight="378.0" prefWidth="514.0" styleClass="anchor-div" stylesheets="@materielajout.css">
+               <children>
+                  <TableView fx:id="tvmaint" layoutX="6.0" layoutY="131.0" prefHeight="233.0" prefWidth="504.0">
+                     <columns>
+                        <TableColumn fx:id="tabidmaint" minWidth="5.0" prefWidth="85.0" text="Identifiant" />
+                        <TableColumn fx:id="tabmatmaint" prefWidth="85.0" text="Materiel" />
+                        <TableColumn fx:id="tabdatedmaint" prefWidth="85.0" text="Date Debut" />
+                        <TableColumn fx:id="tabdatefmaint" prefWidth="85.0" text="Date Fin" />
+                        <TableColumn fx:id="tabdescmaint" prefWidth="160.0" text="Description" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="tfrecherchermaint" layoutX="35.0" layoutY="42.0" prefHeight="32.0" prefWidth="248.0" promptText="Rechercher..." />
+                  <Button fx:id="btrechmaint" layoutX="306.0" layoutY="81.0" mnemonicParsing="false" onAction="#BoutonRechercherMaintenance" prefHeight="33.0" prefWidth="106.0" styleClass="form-button" stylesheets="@materielajout.css" text="Rechercher" />
+                  <ImageView fitHeight="24.0" fitWidth="34.0" layoutX="254.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Image/search.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btsuppmaint" layoutX="306.0" layoutY="42.0" mnemonicParsing="false" onAction="#BoutonSupprimerMaintenance" prefHeight="33.0" prefWidth="106.0" styleClass="form-button" stylesheets="@materielajout.css" text="Supprimer" />
+                  <Button fx:id="btareloadmaint1" layoutX="423.0" layoutY="42.0" mnemonicParsing="false" onAction="#BoutonReloadMaintenance" prefHeight="77.0" prefWidth="90.0" styleClass="form-button" stylesheets="@materielajout.css" text="Reload">
+                     <padding>
+                        <Insets bottom="30.0" />
+                     </padding>
+                  </Button>
+                  <ImageView fitHeight="32.0" fitWidth="34.0" layoutX="452.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Image/reload.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lbconfmaint2" layoutX="27.0" layoutY="98.0" prefHeight="21.0" prefWidth="156.0" styleClass="confirmation-message" stylesheets="@materielajout.css" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
